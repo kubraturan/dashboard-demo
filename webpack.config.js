@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: [
@@ -8,10 +9,27 @@ module.exports = {
     module: {
       rules: [
         {
-            test: /\.(js|jsx)$/,
-            exclude: /node_modules/,
-            use: ['babel-loader']
-        }
+            test: /\.js$/,
+            loader: 'babel-loader',
+            include: [
+                path.join(__dirname, 'src'),
+            ],
+        },
+        {
+            test: /\.css$/,
+            loader: "style-loader!css-loader"
+        },
+        {   
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  esModule: false,
+                },
+              },
+            ]
+        },
       ]
     },
     resolve: {

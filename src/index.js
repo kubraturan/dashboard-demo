@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './screens/App';
 
-const title = 'Dashboard Demo';
+// Her componente tek tek import etmemek için genel css kütüphanesi buraya eklendi.
+import './assets/css/base.css';
 
 ReactDOM.render(
-    <div>{title}</div>,
-    document.getElementById('app')
+    <App/>,
+    document.getElementById('app'),
 );
 
-module.hot.accept();

@@ -1,0 +1,12 @@
+.list-group-item.active,
+.list-group-item.active:hover {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color:#28a745 !important;
+}
+
+.list-menu{
+  background-color: #f8f8f8 !important;
+  border-color: #f8f8f8 !important;
+  color:#6C757D !important;
+}
